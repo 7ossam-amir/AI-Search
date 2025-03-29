@@ -1,53 +1,73 @@
- Maze Navigation using Q-Learning
+Maze Navigation using Q-Learning
+Project Overview
 
-## Project Overview
 This project implements a Q-Learning algorithm to train an agent to navigate through a dynamically generated maze. The agent starts at the top-left corner (0,0) and aims to reach the bottom-right corner (14,14) while maximizing rewards and avoiding obstacles.
+Key Features
 
-## Git Flow Structure
-We follow the Git Flow workflow for development:
+    Dynamic Maze Generation: 15×15 grid with 25% randomly distributed obstacles
 
-main (production-ready releases)
-│
-└── develop (integration branch for features)
-│
-├── feature/* (new features)
-├── release/* (pre-release branches)
-├── hotfix/* (critical bug fixes)
-└── docs/* (documentation updates)
+    Q-Learning Implementation:
+
+        Reward system: +100 for goal, -10 for obstacles, -1 for valid moves
+
+        Exploration rate (ε) of 0.2
+
+    Visualization: Real-time path visualization using Pygame
+
+    Performance Metrics: Tracks optimal path, accuracy, rewards, and steps
+
+Requirements
+
+    Python 3.x
+
+    Pygame library
+
+    NumPy
+
+Installation
+
+    Clone the repository:
+    bash
+    Copy
+
+    git clone https://github.com/7ossam-amir/AI-Search
+
+    Navigate to the project directory:
+    bash
+    Copy
+
+    cd AI-Search
+
+    Install required packages:
+    bash
+    Copy
+
+    pip install -r requirements.txt
+
+Usage
+
+Run the main script to start the Q-Learning process:
+bash
 Copy
 
+python maze_qlearning.py
 
-## File Structure
+Results
 
-AI-Search/
-├── src/ # Source code
-│ ├── maze_qlearning.py # Main Q-Learning implementation
-│ ├── maze_generator.py # Maze generation logic
-│ └── visualization.py # Pygame visualization module
-│
-├── tests/ # Test cases
-│ ├── test_maze.py # Maze generation tests
-│ └── test_qlearning.py # Q-Learning algorithm tests
-│
-├── docs/ # Documentation
-│ ├── design.md # System design
-│ └── results/ # Evaluation results
-│
-├── requirements.txt # Python dependencies
-├── .gitignore # Git ignore rules
-└── README.md # This file
-Copy
+The implementation demonstrates:
 
+    Successful maze navigation learning
 
-## Key Features
-- **Dynamic Maze Generation**: 15×15 grid with 25% randomly distributed obstacles
-- **Q-Learning Implementation**: 
-  - Reward system: +100 for goal, -10 for obstacles, -1 for valid moves
-  - Exploration rate (ε) of 0.2
-- **Visualization**: Real-time path visualization using Pygame
-- **Performance Metrics**: Tracks optimal path, accuracy, rewards, and steps
+    Q-table improvement through training
 
-## Development Workflow
-1. Create a feature branch from `develop`:
-   ```bash
-   git checkout -b feature/new-feature develop
+    Visualization of the optimal path (as shown in project figures)
+
+References
+
+    Q-Learning Algorithm: From explanation to implementation
+
+    Pygame Library
+
+Project Link
+
+GitHub Repository: https://github.com/7ossam-amir/AI-Search
